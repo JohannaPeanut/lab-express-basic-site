@@ -1,29 +1,38 @@
-const { response } = require('express');
+
 const express = require('express');
+const hbs = require('hbs');
+
+hbs.registerPartials(__dirname + '/views/partials')
 
 // will return an object
 const app = express();
 
+app.set('view engine', 'hbs');
+
+app.set('views', __dirname + '/views');
+
 app.use(express.static('public'));
 
+app.locals.pageTitle = 'María Ybarra';
+
 app.get('/about', (request, response) => {
-  response.sendFile(__dirname + '/views/about.html');
+  response.render('about')
 });
 
 app.get('/works', (request, response) => {
-  response.sendFile(__dirname + '/views/works.html');
+  response.render('works')
 });
 
 app.get('/home', (request, response) => {
-  response.sendFile(__dirname + '/views/home.html');
+  response.render('home')
 });
 
 app.get('/', (request, response) => {
-  response.sendFile(__dirname + '/views/home.html');
+  response.render('home')
 });
 
 app.get('*', (request, response) => {
-  response.sendFile(__dirname + '/views/home.html');
+  response.render('home')
 });
 
 app.listen(3001);
