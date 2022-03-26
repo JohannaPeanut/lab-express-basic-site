@@ -1,0 +1,67 @@
+@font-face {
+    font-family: Arapey;
+    src: url('fonts/Arapey-Regular.ttf');
+  }
+  @font-face {
+    font-family: Arapey;
+    font-style: normal;
+    src: url('fonts/Arapey-Regular.ttf');
+  }
+  @font-face {
+    font-family: Arapey;
+    font-style: italic;
+    src: url('fonts/Arapey-Italic.ttf');
+  }
+  
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+  
+  :root {
+    --color: #58f955;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: Arapey;
+    font-size: 8px;
+    background-color: #bf3a30;
+background-image: linear-gradient(315deg, #bf3a30 0%, #864ba2 74%);
+  }
+  
+  body {
+    margin: 2em 4em;
+  }
+  
+  header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    border-bottom: 1px solid black;
+  }
+
+  h1 {
+    font-family: inherit;
+    font-size: 3em;
+  }
+
+  nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  li {
+      list-style: none;
+  }
+  
+  a {
+    font-family: inherit;
+    text-decoration: none;
+    font-size: 3em;
+    padding: 0 1.5em;
+
+  }
